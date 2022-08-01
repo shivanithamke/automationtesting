@@ -14,6 +14,7 @@ describe('Linked In',()=>{
         login.entername('thamkeshivani200@gmail.com')
         login.enterpass('ShivBasu@123')
         login.clicklogin()
+        cy.get('.secondary-action-new').click()
         /* Alternative code 
        // cy.get('input[name=session_key]').should('be.visible').should('be.enabled').type('thamkeshivani200@gmail.com')
        // cy.get('input[id=password]').should('be.visible').should('be.enabled').type('ggg')
@@ -24,7 +25,7 @@ describe('Linked In',()=>{
         cy.get('.login__form > .btn__tertiary--medium').click()
         login.forgetemail('thamkeshivani200@gmail.com')
         cy.get('#reset-password-submit-button').click()
-        cy.get('#captcha-internal').click()
+       // cy.get('#captcha-internal').click()
     })
     it('Sign Up',()=>{
         cy.contains('Join now').click()//verify it contain join now or not
