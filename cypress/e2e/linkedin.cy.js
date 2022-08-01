@@ -12,7 +12,7 @@ describe('Linked In',()=>{
     it('Login',()=>{
 
         login.entername('thamkeshivani200@gmail.com')
-        login.enterpass('abcd')
+        login.enterpass('ShivBasu@123')
         login.clicklogin()
         /* Alternative code 
        // cy.get('input[name=session_key]').should('be.visible').should('be.enabled').type('thamkeshivani200@gmail.com')
@@ -24,8 +24,7 @@ describe('Linked In',()=>{
         cy.get('.login__form > .btn__tertiary--medium').click()
         login.forgetemail('thamkeshivani200@gmail.com')
         cy.get('#reset-password-submit-button').click()
-        cy.get('input[id=input__email_verification_pin]').should('be.visible').should('be.enabled').type('003552')//use should to verify visible or not and enabled or not
-
+        cy.get('#captcha-internal').click()
     })
     it('Sign Up',()=>{
         cy.contains('Join now').click()//verify it contain join now or not
