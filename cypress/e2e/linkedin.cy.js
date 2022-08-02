@@ -8,6 +8,19 @@ beforeEach(function(){//run before each function run
 
 })
 describe('Linked In',()=>{
+    it('invalide login',()=>{
+        login.entername('thamkeshivani200@gmail.com')
+        login.enterpass('Shiv')
+        login.clicklogin()
+        
+    })
+
+    it('invalide login1',()=>{
+        login.entername('thamkeshivani200il.com')
+        login.enterpass('ShivBasu@123')
+        login.clicklogin()
+        
+    })
 
     it('Login',()=>{
 
