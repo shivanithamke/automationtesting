@@ -8,6 +8,12 @@ beforeEach(function(){//run before each function run
 
 })
 describe('Linked In',()=>{
+    it('invalide because blank space',()=>{
+        login.entername('')
+        login.enterpass('')
+        login.clicklogin()
+        
+    })
     it('invalide login',()=>{
         login.entername('thamkeshivani200@gmail.com')
         login.enterpass('Shiv')
