@@ -12,20 +12,20 @@ describe('Linked In',()=>{
         login.entername('')
         login.enterpass('')
         login.clicklogin()
-        
+        cy.get('.secondary-action-new').click()
     })
     it('invalide login',()=>{
         login.entername('thamkeshivani200@gmail.com')
         login.enterpass('Shiv')
         login.clicklogin()
-        
+        cy.get('.secondary-action-new').click()
     })
 
     it('invalide login1',()=>{
         login.entername('thamkeshivani200il.com')
         login.enterpass('ShivBasu@123')
         login.clicklogin()
-        
+        cy.get('.secondary-action-new').click()
     })
 
     it('Login',()=>{
@@ -34,6 +34,8 @@ describe('Linked In',()=>{
         login.enterpass('ShivBasu@123')
         login.clicklogin()
         cy.get('.secondary-action-new').click()
+        cy.get('.global-nav__primary-items > :nth-child(3) > .app-aware-link > .t-12').click()
+        // cy.get('input[id=ember610]').click()
         /* Alternative code 
        // cy.get('input[name=session_key]').should('be.visible').should('be.enabled').type('thamkeshivani200@gmail.com')
        // cy.get('input[id=password]').should('be.visible').should('be.enabled').type('ggg')
@@ -42,9 +44,10 @@ describe('Linked In',()=>{
     }),
     it('Forget Password',()=>{
         cy.get('.login__form > .btn__tertiary--medium').click()
-        login.forgetemail('thamkeshivani200@gmail.com')
+        login.forgetemail('thamkeshivani200@gmail.com').should('be.visible')
         cy.get('#reset-password-submit-button').click()
-       // cy.get('#captcha-internal').click()
+   
+   
     })
     it('Sign Up',()=>{
         cy.contains('Join now').click()//verify it contain join now or not
