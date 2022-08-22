@@ -44,7 +44,7 @@ describe('Linked In',()=>{
     }),
     it('Forget Password',()=>{
         cy.get('.login__form > .btn__tertiary--medium').click()
-        login.forgetemail('thamkeshivani200@gmail.com').should('be.visible')
+        login.forgetemail('thamkeshivani200@gmail.com')
         cy.get('#reset-password-submit-button').click()
    
    
@@ -59,6 +59,8 @@ describe('Linked In',()=>{
         cy.get('#last-name').type('patil')
         cy.get('#join-form-submit').click()
         
+       // cy.get('.challenge-dialog__iframe').find('#register-verification-phone-number').type('345678')
+        //cy.get('.challenge-dialog__iframe').find('')
        // cy.get('.challenge-dialog__iframe').its('0.contentDocument.body').find('id=register-verification-phone-number')
     })
 })
