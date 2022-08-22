@@ -2,7 +2,7 @@ export class linkedinlogin{
     signin_username='input[name=session_key]'//assign locator name 
     signin_password='input[id=password]'//assign locator id
     signin_loginbutton='.btn__primary--large'//assign locator id
-    forget_email='input[name=userName]'
+    forget_email='#username'
     
     
     entername(username){//username is pass parameter
